@@ -1,11 +1,16 @@
+// prendo la stringa dal dom
 const stringElem = document.getElementById("word");
 
+// prendo il form dal dom
 const formElem = document.querySelector("form");
 
+// prendo il div result dal dom
 const resultElem = document.querySelector(".result");
 
+// creo variabile per il risultato
 let strResult = "";
 
+// aggiungo eventListner al submit del form
 formElem.addEventListener("submit", function (event) {
     event.preventDefault();
     
