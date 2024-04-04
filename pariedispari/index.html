@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,39 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
+    <div class="container">
+        <form action="" class="mb">
+            <div class="mb">
+                <label for="even-or-odd">Scegli pari o dispari: </label>
+                <select name="even-or-odd" id="even-or-odd">
+                    <option value="pari">Pari</option>
+                    <option value="dispari">Dispari</option>
+                </select>
+            </div>
+
+            <div class="mb">
+                <label for="number">Scegli un numero da 1 a 5: </label>
+                <select name="number" id="number">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <button type="submit">Gioca</button>
+
+        </form>
+
+        <div class="result hidden"></div>
+    </div>
 
     <script src="./js/functions.js"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
