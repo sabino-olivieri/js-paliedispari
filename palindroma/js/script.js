@@ -1,4 +1,4 @@
-const wordElem = document.getElementById("word");
+const stringElem = document.getElementById("word");
 
 const formElem = document.querySelector("form");
 
@@ -9,17 +9,17 @@ let strResult = "";
 formElem.addEventListener("submit", function (event) {
     event.preventDefault();
     
-    if(isPalindroma(wordElem.value)) {
+    if(isPalindroma(stringElem.value)) {
         strResult = "è palindroma";
     } else {
         strResult = "non è palindroma";
     }
     resultElem.classList.remove("hidden");
     
-    resultElem.innerHTML = `La parola ${wordElem.value}: <strong>${strResult}</strong>`;
+    resultElem.innerHTML = `La stringa "${stringElem.value}" : <strong>${strResult}</strong>`;
     console.log(strResult);
     
 
-    wordElem.value = "";
+    stringElem.value = "";
 })
 

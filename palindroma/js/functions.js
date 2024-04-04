@@ -1,21 +1,28 @@
 /**
  * Description : controllo se la parola è palindroma
- * @param {string} word stringa da controllare  
+ * @param {string} stringUser stringa da controllare  
  * @returns {boolean} true se la parola è palindroma, altrimenti false
  */
-function isPalindroma(word) {
+function isPalindroma(stringUser) {
 
-    let wordReverse = "";
+    let stringUserReverse = "";
+    let strigNoSpace = "";
 
-    word = word.toLowerCase();
+    stringUser = stringUser.toLowerCase();
 
-    for(let i = word.length - 1; i >= 0; i--) {
-
-        wordReverse += word[i]
+    for (let i = 0; i < stringUser.length; i++) {
+        if(stringUser[i] !== " ") {
+            strigNoSpace += stringUser[i];
+        }
     }
 
-    console.log(word, wordReverse);
+    for(let i = strigNoSpace.length - 1; i >= 0; i--) {
+
+        stringUserReverse += strigNoSpace[i]
+    }
+
+    console.log(strigNoSpace, stringUserReverse);
     
-    return word === wordReverse;
+    return strigNoSpace === stringUserReverse;
     
 }
